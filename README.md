@@ -36,13 +36,64 @@ A professional portfolio website for soprano and voice teacher Xin Zhou, built f
    - Click "Save"
    - Your site will be available at `https://yourusername.github.io/repository-name/`
 
-### Custom Domain (Optional)
+### Custom Domain Setup
 
-If you want to use a custom domain (e.g., `xinzhou.com`):
+**Domain: xinzhouvoice.com**
 
-1. Add a file named `CNAME` (no extension) in the root directory with your domain name
-2. Configure your domain's DNS settings to point to GitHub Pages
-3. GitHub will handle the rest
+1. **CNAME file is already created** - Contains `xinzhouvoice.com`
+
+2. **Configure DNS Settings** (at your domain registrar, e.g., GoDaddy, Namecheap, etc.):
+   
+   Add these DNS records:
+   
+   **Option A: Using A Records (Recommended)**
+   - Type: `A`
+   - Name: `@` (or leave blank)
+   - Value: `185.199.108.153`
+   - TTL: 3600 (or default)
+   
+   - Type: `A`
+   - Name: `@` (or leave blank)
+   - Value: `185.199.109.153`
+   - TTL: 3600 (or default)
+   
+   - Type: `A`
+   - Name: `@` (or leave blank)
+   - Value: `185.199.110.153`
+   - TTL: 3600 (or default)
+   
+   - Type: `A`
+   - Name: `@` (or leave blank)
+   - Value: `185.199.111.153`
+   - TTL: 3600 (or default)
+   
+   **Option B: Using CNAME Record**
+   - Type: `CNAME`
+   - Name: `@` (or leave blank)
+   - Value: `zxstella824-hub.github.io`
+   - TTL: 3600 (or default)
+   
+   **For www subdomain (optional):**
+   - Type: `CNAME`
+   - Name: `www`
+   - Value: `zxstella824-hub.github.io`
+   - TTL: 3600 (or default)
+
+3. **Enable Custom Domain on GitHub:**
+   - Go to your repository: https://github.com/zxstella824-hub/Xin_Website
+   - Click **Settings** → **Pages**
+   - Under **Custom domain**, enter: `xinzhouvoice.com`
+   - Check **"Enforce HTTPS"** (after DNS propagates)
+   - Click **Save**
+
+4. **Wait for DNS Propagation:**
+   - DNS changes can take 24-48 hours to fully propagate
+   - You can check status at: https://www.whatsmydns.net/#A/xinzhouvoice.com
+   - Once DNS is active, GitHub will automatically configure SSL/HTTPS
+
+5. **Your site will be available at:**
+   - `https://xinzhouvoice.com`
+   - `https://www.xinzhouvoice.com` (if you set up www CNAME)
 
 ## Adding Content
 
@@ -160,4 +211,5 @@ For questions or issues, please contact xin22@illinois.edu
 ## License
 
 This website template is created for Xin Zhou's professional use.
+
 
