@@ -474,7 +474,7 @@ header {
 
 .video-program a {
     color: var(--primary-color);
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.3s ease;
 }
 
@@ -605,7 +605,8 @@ header {
     line-height: 1.8;
 }
 
-.detail-section ul {
+.detail-section ul,
+.detail-section ol {
     margin-left: 2rem;
     margin-top: 1rem;
 }
