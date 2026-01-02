@@ -206,7 +206,7 @@ The site uses Georgia serif font. To change:
 
 ## Support
 
-For questions or issues, please contact xin22@illinois.edu
+For questions or issues, please contact xinzhouvoice@gmail.com
 
 ## License
 

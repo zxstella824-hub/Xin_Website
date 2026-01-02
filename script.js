@@ -33,21 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact form handling (basic - requires backend for full functionality)
-    const contactForm = document.querySelector('.contact-form');
+    // Contact form handling - uses mailto (no backend required)
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form data
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
             
-            // Create mailto link (fallback since form needs backend)
-            const mailtoLink = `mailto:xin22@illinois.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            // Create mailto link with form data
+            const mailtoLink = `mailto:xinzhouvoice@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
             window.location.href = mailtoLink;
         });
     }
